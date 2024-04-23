@@ -1,0 +1,38 @@
+
+CREATE TABLE client 
+costumer_id : int et PRIMARY KEY
+nom :varchar (n)
+adresse : varchar (n)
+ADD countraint PK_costumer primary key ( costumer_id )
+
+
+CREATE TABLE produit 
+product_id : int et PRIMARY KEY
+nom : varchar
+prix : decimal et CHECK > 0
+ADD countraint chk_produitprix CHECK > 0 
+
+
+CREATE TABLE commandes 
+order_id : int et PRIMARY KEY
+costumer_id: int et FOREIGN KEY(references à la clée primaire de la table client)
+product_id : int et FOREIGN KEY( references à la clée ptimaire de la table produits)
+quantite : int 
+order date :DATE
+ADD countraint FOREIGN KEY(product_id)references identity (product_id) 
+
+              
+INSERT INT tableproduit :( name;price ) ( cookies;10) ( candy;5,2)
+                    
+ INSERT INT tableclient : ( name;adress) ( ahmed;Tunisia) ( coulibaly; Senegal) ( hassan;Egypt)
+                    
+ INSERT INT tablecommandes : ( costumer_id;product_id;quantity;orderdate) ( 1;2;3;'2023-01-22') (2;1;10;'2023-04-14') 
+                    
+                    
+ UPDATE tablecommandes=" new quantity" où quantity= 6
+                    
+  DELETE from tableclient: where client= ( name;adress) ( hassan;Egypt)
+                    
+  DELETE from tablecommandes; 
+                    
+                    
